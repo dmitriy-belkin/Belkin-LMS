@@ -1,12 +1,24 @@
 import { Component } from '@angular/core';
+import { AuthService } from '../auth.service';
 
 @Component({
   selector: 'app-login',
-  standalone: true,
-  imports: [],
   templateUrl: './login.component.html',
-  styleUrl: './login.component.scss'
+  styleUrls: ['./login.component.css'],
 })
 export class LoginComponent {
+  constructor(private authService: AuthService) {}
 
+  login(username: string, password: string): void {
+    this.authService.login(username, password).subscribe(
+      (response) => {
+        // Обработка успешного входа
+        console.log(response);
+      },
+      (error) => {
+        // Обработка ошибки входа
+        console.error(error);
+      }
+    );
+  }
 }
