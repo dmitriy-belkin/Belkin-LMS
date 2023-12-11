@@ -6,9 +6,9 @@ import { RouterOutlet } from '@angular/router';
   selector: 'app-root',
   standalone: true,
   imports: [CommonModule, RouterOutlet],
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.scss'
+  templateUrl: './home/home.component.html',
+  styleUrl: './home/home.component.scss'
 })
 export class AppComponent {
-  title = 'Belkin-LMS-Frontend';
+  title = 'Belkin LMS';
 }
