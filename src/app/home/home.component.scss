@@ -1,0 +1,45 @@
+$primary-color: #4a90e2; // Пример цвета, можно заменить на свой
+$secondary-color: #f4f4f4; // Дополнительный цвет
+
+.home-container {
+  padding: 20px;
+
+  .welcome-section {
+    text-align: center;
+    
+    h1 {
+      color: $primary-color;
+    }
+
+    p {
+      color: $secondary-color;
+    }
+  }
+
+  .courses-section {
+    margin-top: 40px;
+
+    .courses-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+
+      .course-card {
+        background: $secondary-color;
+        padding: 15px;
+        border-radius: 5px;
+        width: 30%; // Пример ширины, можно адаптировать
+
+        h3 {
+          color: $primary-color;
+        }
+
+        p {
+          color: #333;
+        }
+      }
+    }
+  }
+
+  // Стили для дополнительных секций
+}
