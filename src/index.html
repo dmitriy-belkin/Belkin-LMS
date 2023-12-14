@@ -8,39 +8,6 @@
   <link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
 <body>
-  <header id="nav-bar">
-    <div class="logo" onclick="toggleMenu()">
-    <img src="src/logo.png" alt="Logotype">
-    </div>
-    <div class="nav-link">
-      <a class="active" href="#home">Главная</a>
-      <a href="#">Каталог</a>
-      <a href="#">Моё обучение</a>
-      <a href="#">Преподавание</a>
-    </div>
-    <div class="search">
-      <input type="text" placeholder="Поиск">
-      <div class="search-icon">🔍</div>
-    </div>
-    <div class="language">Language Selector</div>
-    <div class="notification-icons">
-      <div class="notification-icon">🔔</div>
-      <div class="lightning-icon">⚡</div>
-      <div class="number">1</div>
-    </div>
-    <div class="profile-menu" id="profileMenu">
-      <div>Profile</div>
-      <div>Settings</div>
-      <div>Notifications (<span class="notification-badge">1</span>)</div>
-      <button>Выход</button>
-    </div>
-  </header>
-  <script>
-    function toggleMenu() {
-      var menu = document.getElementById('profileMenu');
-      menu.classList.toggle('show');
-    }
-  </script>
   <app-root></app-root>
 </body>
 </html>
