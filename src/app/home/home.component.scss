@@ -1,5 +1,5 @@
-$primary-color: #4a90e2; // Пример цвета, можно заменить на свой
-$secondary-color: #f4f4f4; // Дополнительный цвет
+$primary-color: #4a90e2;
+$secondary-color: #f4f4f4;
 
 .home-container {
   padding: 20px;
@@ -28,7 +28,7 @@ $secondary-color: #f4f4f4; // Дополнительный цвет
         background: $secondary-color;
         padding: 15px;
         border-radius: 5px;
-        width: 30%; // Пример ширины, можно адаптировать
+        width: 30%;
 
         h3 {
           color: $primary-color;
@@ -40,6 +40,4 @@ $secondary-color: #f4f4f4; // Дополнительный цвет
       }
     }
   }
-
-  // Стили для дополнительных секций
 }

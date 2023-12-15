@@ -1,24 +1,16 @@
-import { Component } from '@angular/core';
-import { AuthService } from '../auth.service';
+import { HttpClient } from '@angular/common/http';
+import { Injectable } from '@angular/core';
 
-@Component({
-  selector: 'app-login',
-  templateUrl: './login.component.html',
-  styleUrls: ['./login.component.css'],
+@Injectable({
+  providedIn: 'root'
 })
-export class LoginComponent {
-  constructor(private authService: AuthService) {}
+export class AuthService {
+  constructor(private http: HttpClient) {}
 
-  login(username: string, password: string): void {
-    this.authService.login(username, password).subscribe(
-      (response) => {
-        // Обработка успешного входа
-        console.log(response);
-      },
-      (error) => {
-        // Обработка ошибки входа
-        console.error(error);
-      }
-    );
+  login(username: string, password: string) {
+    return this.http.post<any>('/token', { username, password })
+      .subscribe(data => {
+        localStorage.setItem('token', data.access_token);
+      });
   }
 }

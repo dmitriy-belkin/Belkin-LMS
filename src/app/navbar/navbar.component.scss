@@ -1,23 +1,23 @@
 $navbar-background-color: #222222;
+$navbar-text-color: #ffffff;
+$navbar-search-background-color: #333;
+$navbar-search-color: #5e5e5e;
 
-$navbar-background-color: #222222;
-
-header {
+.navbar {
   background-color: $navbar-background-color;
-  height: 50px;
+  height: 42px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 20px; // Добавьте отступы по вашему усмотрению
+  padding: 4px 24px;
+  overflow: hidden;
+  grid-row: 2;
+  grid-column: 1;
 }
 
-.nav-bar {
-    background-color: #333;
-    overflow: hidden;
-  }
-
 .navbar-logo {
-    width: 130px;
+    height: 40px;
+    margin-right: 70px;
 }
 
 .nav-link a {
@@ -40,45 +40,128 @@ header {
 }
 
 .logo {
-  // Стили для логотипа
-  color: white; // Пример стиля текста белого цвета
+  color: white;
   cursor: pointer;
 }
 
 .nav-buttons {
   display: flex;
-  gap: 20px; // Расстояние между кнопками
+  gap: 20px;
 }
 
-.search {
-  // Стили для поля поиска
-  display: flex;
-  align-items: center;
+.navbar-spacer {
+  flex: 1;
+  margin: 0 10px;
+  pointer-events: none;
+}
 
-  input {
-    // Стили для инпута
-    height: 30px;
+// Search
+.search-full {
+  margin: 0 16px 0 0;
+  align-self: center;
+
+  .search {
+    border: none;
+    display: flex;
+    background-color: $navbar-search-background-color;
+    color: $navbar-search-color;
+    background-image: url(/assets/images/topbar_search.svg) !important;
+    background-repeat: no-repeat !important;
+    background-position: 0.4em center !important;
+    background-size: 1.15em 1.15em !important;
     padding: 5px;
-  }
+    padding-right: 0.5em;
+    padding-left: 2em;
+    height: 24px;
+    border-radius: 5px !important;
+    }
 
-  .search-icon {
-    // Стили для иконки поиска
+  .search-input {
+    background-color: $navbar-search-background-color;
+    color: $navbar-search-color;
+    border: none;
     margin-left: 5px;
-    font-size: 20px;
+    font-size: 16px;
+      &:focus {
+        outline: none;
+      }
+  }
+  .search:focus-within {
+    background-color: #ffffff;
+    border: none;
+  }
+
+  .search-input:focus-within {
+    background-color: #ffffff;
+    border: none;
+    border-color: #999;
   }
 }
 
-.language {
-  // Стили для выбора языка
+// Language selector
+
+
+// Vertical divider
+.navbar-divider {
+  height: 50px;
+  width: 1px;
+  background-color: rgba(94, 94, 94, .6);
+  margin: 0 10px;
 }
 
+// Login
+.navbar-login-button {
+  align-self: center;
+  white-space: nowrap;
+  border: 1px solid rgba(94, 94, 94, .6);
+  border-radius: 5px;
+  padding: 4px 15px;
+  text-decoration: none;
+  margin-left: 12px;
+  margin-right: 4px;
+}
+.navbar-login-button, a:active {
+  color: #fff;
+}
+
+.navbar-login-button:hover {
+  color: #fff;
+  border-color: #777;
+  transition-duration: .3s;
+}
+
+// SingUp
+.navbar-singup-button {
+  margin-left: 4px;
+  align-self: center;
+  white-space: nowrap;
+  color: #fff;
+  border: 1px solid rgba(94, 94, 94, .6);
+  border-radius: 5px;
+  padding: 4px 15px;
+  text-decoration: none;
+  transition-property: color,border-color;
+  transition-duration: .3s;
+}
+
+.navbar-singup-button, a:active {
+  color: #fff;
+}
+
+.navbar-singup-button:hover {
+  color: #fff;
+  border-color: #777;
+  transition-duration: .3s;
+}
+
+
+// Notification
 .notification-icons {
   display: flex;
-  gap: 10px; // Расстояние между иконками уведомлений
+  gap: 10px;
 }
 
 .profile-menu {
-  // Стили для меню профиля
   display: none;
   flex-direction: column;
   position: absolute;
@@ -105,7 +188,6 @@ header {
   display: flex;
 }
 .notification-badge {
-  // Стили для бейджа уведомлений
   background-color: red;
   color: white;
   padding: 2px 5px;
