@@ -1,6 +1,5 @@
 $navbar-background-color: #222222;
-
-$navbar-background-color: #222222;
+$navbar-text: #ffffff;
 
 header {
   background-color: $navbar-background-color;
@@ -8,7 +7,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 20px; // Добавьте отступы по вашему усмотрению
+  padding: 0 20px;
 }
 
 .nav-bar {
@@ -40,45 +39,40 @@ header {
 }
 
 .logo {
-  // Стили для логотипа
-  color: white; // Пример стиля текста белого цвета
+  color: white;
   cursor: pointer;
 }
 
 .nav-buttons {
   display: flex;
-  gap: 20px; // Расстояние между кнопками
+  gap: 20px;
 }
 
 .search {
-  // Стили для поля поиска
   display: flex;
   align-items: center;
 
   input {
-    // Стили для инпута
     height: 30px;
     padding: 5px;
   }
 
   .search-icon {
-    // Стили для иконки поиска
     margin-left: 5px;
     font-size: 20px;
   }
 }
 
 .language {
-  // Стили для выбора языка
+  color: $navbar-text;
 }
 
 .notification-icons {
   display: flex;
-  gap: 10px; // Расстояние между иконками уведомлений
+  gap: 10px;
 }
 
 .profile-menu {
-  // Стили для меню профиля
   display: none;
   flex-direction: column;
   position: absolute;
@@ -105,7 +99,6 @@ header {
   display: flex;
 }
 .notification-badge {
-  // Стили для бейджа уведомлений
   background-color: red;
   color: white;
   padding: 2px 5px;
