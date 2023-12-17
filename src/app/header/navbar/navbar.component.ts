@@ -5,8 +5,23 @@ import { Component } from '@angular/core';
   standalone: true,
   imports: [],
   templateUrl: './navbar.component.html',
-  styleUrl: './navbar.component.scss'
+  styleUrls: ['./navbar.component.scss']
 })
 export class NavbarComponent {
+  dropdownOpen: boolean = false;
+  public isMenuVisible: boolean = false;
+  
+  toggleMenu() {
+    this.isMenuVisible = !this.isMenuVisible;
+  }
 
+  toggleDropdown() {
+    this.dropdownOpen = !this.dropdownOpen;
+  }
+
+  closeDropdown() {
+    if (this.dropdownOpen) {
+      this.dropdownOpen = false;
+    }
+  }
 }
