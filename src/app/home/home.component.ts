@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
-import { NavbarComponent } from '../header/navbar/navbar.component';
+import { HeaderComponent } from '../header/header.component';
+import { FiltersComponent } from '../filters/filters.component';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [NavbarComponent],
+  imports: [HeaderComponent, FiltersComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
 })

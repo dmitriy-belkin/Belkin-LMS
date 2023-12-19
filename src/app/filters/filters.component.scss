@@ -1,0 +1,25 @@
+@import '../env.scss';
+
+.header-category {
+    background-color: $section-first;
+}
+
+.category-filters {
+    text-align: center;
+    padding: 2% 20%;
+    display: flex;
+  }
+  
+  .categories button {
+    border-radius: 5px;
+    padding: 10px;
+    margin: 0.3em 0.3em 0.2em;
+    border: 1px solid blue;
+    background-color: #eeedb05a;
+    cursor: pointer;
+  }
+  
+  .categories button:hover {
+    background-color: #e0e0e0;
+  }
+  
